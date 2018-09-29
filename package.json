@@ -1,0 +1,52 @@
+{
+  "name": "mp42fmp4",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "pack:mac": "yarn compile && electron-builder --mac",
+    "pack:win": "yarn compile && electron-builder --win"
+  },
+  "build": {
+    "productName": "mp42fmp4",
+    "appId": "org.develar.mp42fmp4",
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "title": "mp42fmp4"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "${productName}-${version}-${os}-${arch}-setup.${ext}",
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "dependencies": {
+    "bento4-installer": "^1.0.8",
+    "source-map-support": "^0.5.9"
+  },
+  "devDependencies": {
+    "electron": "2.0.7",
+    "electron-builder": "^20.28.1",
+    "electron-webpack": "^2.1.2",
+    "webpack": "^4.16.5"
+  },
+  "resolutions": {
+    "upath": "^1.0.5"
+  }
+}

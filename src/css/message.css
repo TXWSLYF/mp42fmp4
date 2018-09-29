@@ -1,0 +1,18 @@
+.message-element {
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  line-height: 16px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-element-success {
+  color: rgb(28, 184, 65);
+}
+
+.message-element-error {
+  color: rgb(202, 60, 60);
+}
