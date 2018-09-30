@@ -6,7 +6,8 @@
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
     "pack:mac": "yarn compile && electron-builder --mac",
-    "pack:win": "yarn compile && electron-builder --win"
+    "pack:win": "yarn compile && electron-builder --win",
+    "pack:all": "yarn compile && electron-builder --mac --win"
   },
   "build": {
     "productName": "mp42fmp4",
